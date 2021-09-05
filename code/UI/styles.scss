@@ -1,0 +1,24 @@
+﻿UITeam {
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    font-size: 40px;
+    padding: 2px 10px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    align-items: center;
+    &.runner{
+        background-color: blue;
+     }
+}
+
+UICountdown {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    font-size: 40px;
+    padding: 2px 10px;
+    background-color: rgba(25, 25, 25, 200);
+    color: white;
+    align-items: center;
+}

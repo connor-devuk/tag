@@ -1,0 +1,5 @@
+F:\Games\Steam\steamapps\common\sbox\Addons\tag-reloaded\code\obj\Debug\net5.0\tag-reloaded.csprojAssemblyReference.cache
+F:\Games\Steam\steamapps\common\sbox\Addons\tag-reloaded\code\obj\Debug\net5.0\tag-reloaded.GeneratedMSBuildEditorConfig.editorconfig
+F:\Games\Steam\steamapps\common\sbox\Addons\tag-reloaded\code\obj\Debug\net5.0\tag-reloaded.AssemblyInfoInputs.cache
+F:\Games\Steam\steamapps\common\sbox\Addons\tag-reloaded\code\obj\Debug\net5.0\tag-reloaded.AssemblyInfo.cs
+F:\Games\Steam\steamapps\common\sbox\Addons\tag-reloaded\code\obj\Debug\net5.0\tag-reloaded.csproj.CoreCompileInputs.cache
