@@ -5,23 +5,17 @@ namespace TagGame
 {
 	public partial class TagPlayer : Player
 	{
-		[Net] public Team PlayerTeam { get; set; }
 		public float nextTouch = 0;
-		public Team team {
-			get => PlayerTeam;
-			set
-			{
-				Team previous = PlayerTeam;
-				previous?.OnLeave( this );
-				value?.OnBecome( this );
-				PlayerTeam = value;
-			}
+		[Net, OnChangedCallback] public Team team { get; set; }
+		private void OnteamChanged()
+		{
+			team?.OnBecome( this );
 		}
 		public override void Respawn()
 		{
 			SetModel( "models/citizen/citizen.vmdl" );
 			Animator = new StandardPlayerAnimator();
-			Controller = new WalkController();
+			Controller = new TagController();
 			Camera = new FirstPersonCamera();
 			EnableAllCollisions = false;
 			EnableTouch = true;
@@ -47,11 +41,11 @@ namespace TagGame
 				}
 			}
 		}
-		public override void StartTouch( Entity other )
+		public override void Touch( Entity other )
 		{
+			base.StartTouch( other );
 			if ( other is not TagPlayer ) return;
 			Tag.Instance.currentRound?.PlayerTouch( this, other as TagPlayer );
-			base.StartTouch( other );
 		}
 	}
 }
